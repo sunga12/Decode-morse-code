@@ -9,23 +9,23 @@ def decode_char(morse)
     '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X', '-.--' => 'Y',
     '--..' => 'Z'
   }
-morse_code[morse]
-
+  morse_code[morse]
 end
 
 def decode_string(str)
-  str.split(' ')
-  .map do |word|
+  str.split
+    .map do |word|
     decode_char word
   end
-  .join('')
+    .join
 end
-def decode_morse(morseCode)
-  morseCode.split('   ')
-  .map do |word|
+
+def decode_morse(morsecode)
+  morsecode.split('   ')
+    .map do |word|
     decode_string word
   end
-  .join(' ')
+    .join(' ')
 end
-puts decode_morse ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
-puts decode_morse "-- -.--   -. .- -- ."
+puts decode_morse '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+puts decode_morse '-- -.--   -. .- -- .'
