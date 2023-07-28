@@ -27,5 +27,6 @@ def decode_morse(morsecode)
   end
     .join(' ')
 end
+
 puts decode_morse '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 puts decode_morse '-- -.--   -. .- -- .'
