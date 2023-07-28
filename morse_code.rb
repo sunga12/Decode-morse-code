@@ -20,6 +20,7 @@ def decode_string(str)
   end
   .join('')
 end
+
 def decode_morse(morseCode)
   morseCode.split('   ')
   .map do |word|
@@ -27,5 +28,6 @@ def decode_morse(morseCode)
   end
   .join(' ')
 end
+
 puts decode_morse ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
 puts decode_morse "-- -.--   -. .- -- ."
